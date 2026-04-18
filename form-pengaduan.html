@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form Pengaduan — Portal SI UNAIR</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .55s ease, transform .55s ease;
+    }
+    .reveal.revealed { opacity: 1; transform: none; }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.8fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    @media (max-width: 820px) {
+      .contact-layout { grid-template-columns: 1fr; }
+    }
+
+    .contact-info-card {
+      background: var(--navy);
+      color: var(--white);
+      border-radius: var(--radius-xl);
+      padding: 2.5rem;
+      position: sticky;
+      top: calc(var(--nav-h) + 1.5rem);
+    }
+    .contact-info-card .ci-title {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      color: var(--white);
+      margin-bottom: .5rem;
+    }
+    .contact-info-card .ci-sub {
+      font-size: .82rem;
+      color: rgba(255,255,255,.55);
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .ci-item {
+      display: flex;
+      align-items: flex-start;
+      gap: .85rem;
+      margin-bottom: 1.25rem;
+    }
+    .ci-icon {
+      width: 38px; height: 38px;
+      background: rgba(201,162,39,.15);
+      border-radius: var(--radius-sm);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+    .ci-detail .ci-label {
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: .15rem;
+    }
+    .ci-detail .ci-value {
+      font-size: .82rem;
+      color: rgba(255,255,255,.7);
+      line-height: 1.5;
+    }
+
+    .form-card {
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--gray-200);
+    }
+    .form-card-title {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      color: var(--navy);
+      margin-bottom: .4rem;
+    }
+    .form-card-sub {
+      font-size: .875rem;
+      color: var(--gray-600);
+      margin-bottom: 2rem;
+      line-height: 1.65;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: .9rem;
+      font-size: .95rem;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--navy), var(--navy-light));
+      color: var(--white);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+    }
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+      background: linear-gradient(135deg, var(--navy-light), var(--navy));
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══ NAVBAR ══ -->
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <div class="brand-icon">
+        <img src="/assets/logo_unair.png" alt="Logo UNAIR">
+    </div>
+      <div class="brand-text">
+        <span class="brand-title">SI UNAIR</span>
+        <span class="brand-sub">Portal Akademik</span>
+      </div>
+    </div>
+    <div class="nav-toggle" role="button" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="informasi-akademik.html">Informasi Akademik</a>
+      <a href="mata-kuliah.html">Mata Kuliah</a>
+      <a href="form-pengaduan.html" class="active">Form Pengaduan</a>
+    </div>
+  </nav>
+
+  <main class="page-main">
+
+    <!-- ══ PAGE HERO ══ -->
+    <div class="page-hero">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="sep">›</span>
+        <span>Form Pengaduan</span>
+      </div>
+      <div class="page-hero-label">Layanan Mahasiswa</div>
+      <h1 class="page-hero-title">Form Pengaduan</h1>
+      <p class="page-hero-desc">Hubungi kami untuk pertanyaan, saran, atau informasi lebih lanjut terkait kegiatan akademik.</p>
+    </div>
+
+    <!-- ══ MAIN CONTENT ══ -->
+    <section class="section">
+      <div class="contact-layout">
+
+        <!-- Info sidebar -->
+        <div class="contact-info-card reveal">
+          <div class="ci-title">Hubungi Kami</div>
+          <div class="ci-sub">Kami siap membantu Anda. Kirim pesan dan tim kami akan merespons secepatnya melalui email Anda.</div>
+
+          <div class="ci-item">
+            <div class="ci-icon">📍</div>
+            <div class="ci-detail">
+              <div class="ci-label">Alamat</div>
+              <div class="ci-value">Gedung Kantor Manajemen, Kampus MERR C Mulyorejo, Surabaya</div>
+            </div>
+          </div>
+
+          <div class="ci-item">
+            <div class="ci-icon">📞</div>
+            <div class="ci-detail">
+              <div class="ci-label">Telepon</div>
+              <div class="ci-value">(031) 5914042, 5914043, 5915551<br>Fax. (031) 5915551</div>
+            </div>
+          </div>
+
+          <div class="ci-item">
+            <div class="ci-icon">💬</div>
+            <div class="ci-detail">
+              <div class="ci-label">WhatsApp (Chat Only)</div>
+              <div class="ci-value">+62 812-3456-9007</div>
+            </div>
+          </div>
+
+          <div class="ci-item">
+            <div class="ci-icon">✉️</div>
+            <div class="ci-detail">
+              <div class="ci-label">Email</div>
+              <div class="ci-value">adm@humas.unair.ac.id</div>
+            </div>
+          </div>
+
+          <div style="margin-top:2rem; padding-top:1.5rem; border-top:1px solid rgba(255,255,255,.1); font-size:.78rem; color:rgba(255,255,255,.4); line-height:1.6;">
+            PUSAT HUBUNGAN MASYARAKAT DAN PROTOKOL (PHMP) · Universitas Airlangga
+          </div>
+        </div>
+
+        <!-- Form card -->
+        <div class="form-card reveal">
+          <div class="form-card-title">Kirim Pesan</div>
+          <div class="form-card-sub">
+            Jika Anda memiliki pertanyaan, saran, atau membutuhkan informasi lebih lanjut terkait kegiatan akademik, silakan hubungi kami melalui formulir berikut.
+          </div>
+
+          <!-- SUCCESS -->
+          <div class="success-box" id="successBox">
+            <div class="s-icon">✅</div>
+            <div class="s-title">Pesan Anda berhasil dikirim!</div>
+            <div class="s-text">Terima kasih, kami akan segera menghubungi Anda melalui email.</div>
+          </div>
+
+          <!-- FORM -->
+          <form id="pengaduanForm" novalidate>
+
+            <div class="form-group">
+              <label class="form-label" for="nama">Nama Lengkap <span>*</span></label>
+              <input
+                type="text"
+                id="nama"
+                class="form-control"
+                placeholder="Masukkan nama Anda"
+                autocomplete="name"
+              />
+              <div class="field-error" id="namaErr"></div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="email">Email <span>*</span></label>
+              <input
+                type="email"
+                id="email"
+                class="form-control"
+                placeholder="Masukkan email aktif"
+                autocomplete="email"
+              />
+              <div class="field-error" id="emailErr"></div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="pesan">Pesan <span>*</span></label>
+              <textarea
+                id="pesan"
+                class="form-control"
+                placeholder="Tulis pesan Anda di sini"
+                rows="5"
+              ></textarea>
+              <div class="field-error" id="pesanErr"></div>
+            </div>
+
+            <button type="submit" class="btn submit-btn">
+              ✉️ Kirim Pesan
+            </button>
+
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══ FOOTER ══ -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand-name">Portal Akademik SI UNAIR</div>
+        <div class="footer-brand-sub">Program Studi Sistem Informasi</div>
+        <p class="footer-about">Platform informasi akademik terpadu untuk mahasiswa Sistem Informasi Universitas Airlangga.</p>
+      </div>
+      <div>
+        <div class="footer-contact-title">PUSAT HUBUNGAN MASYARAKAT DAN PROTOKOL (PHMP)</div>
+        <div class="footer-contact-item"><span class="icon">📍</span><span>Gedung Kantor Manajemen, Kampus MERR C Mulyorejo – Surabaya</span></div>
+        <div class="footer-contact-item"><span class="icon">📞</span><span>Telp. (031) 5914042, 5914043, 5915551 · Fax. (031) 5915551</span></div>
+        <div class="footer-contact-item"><span class="icon">💬</span><span>WhatsApp (Chat Only): +62 812-3456-9007</span></div>
+        <div class="footer-contact-item"><span class="icon">✉️</span><span>Email: adm@humas.unair.ac.id</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2025 Portal Akademik Sistem Informasi · Universitas Airlangga.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

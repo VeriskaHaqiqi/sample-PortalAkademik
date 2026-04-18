@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Informasi Akademik — Portal SI UNAIR</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .55s ease, transform .55s ease;
+    }
+    .reveal.revealed { opacity: 1; transform: none; }
+  </style>
+</head>
+<body>
+
+  <!-- ══ NAVBAR ══ -->
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <div class="brand-icon">
+        <img src="/assets/logo_unair.png" alt="Logo UNAIR">
+    </div>
+      <div class="brand-text">
+        <span class="brand-title">SI UNAIR</span>
+        <span class="brand-sub">Portal Akademik</span>
+      </div>
+    </div>
+    <div class="nav-toggle" role="button" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="informasi-akademik.html" class="active">Informasi Akademik</a>
+      <a href="mata-kuliah.html">Mata Kuliah</a>
+      <a href="form-pengaduan.html">Form Pengaduan</a>
+    </div>
+  </nav>
+
+  <main class="page-main">
+
+    <!-- ══ PAGE HERO ══ -->
+    <div class="page-hero">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="sep">›</span>
+        <span>Informasi Akademik</span>
+      </div>
+      <div class="page-hero-label">Layanan Akademik</div>
+      <h1 class="page-hero-title">Informasi Akademik</h1>
+      <p class="page-hero-desc">Akses berkas akademik, kalender, dan informasi beasiswa yang tersedia untuk mahasiswa Sistem Informasi UNAIR.</p>
+    </div>
+
+    <!-- ══ MAIN CONTENT ══ -->
+    <section class="section">
+
+      <!-- TABS -->
+      <div class="tabs reveal">
+        <button class="tab-btn active" data-tab="berkas">Berkas Akademik</button>
+        <button class="tab-btn" data-tab="kalender">Kalender Akademik</button>
+        <button class="tab-btn" data-tab="beasiswa">Informasi Beasiswa</button>
+      </div>
+
+      <!-- ── TAB: BERKAS ── -->
+      <div class="tab-panel active" id="berkas">
+        <div class="section-header" style="text-align:left; margin-bottom:2rem;">
+          <div class="section-label">Unduh & Akses</div>
+          <h2 class="section-title" style="font-size:1.6rem;">Berkas Akademik</h2>
+          <p class="section-desc" style="margin-left:0; text-align:left;">Klik kartu untuk mengakses folder dokumen di Google Drive.</p>
+        </div>
+        <div class="cards-grid cards-grid-5">
+
+          <div class="card reveal" onclick="window.open('https://drive.google.com/drive/folders/1WOEJ530ZbAD1T_jsfvxZ06zhctKRaRdA','_blank')">
+            <div class="card-icon">📝</div>
+            <div class="card-title">Skripsi</div>
+            <div class="card-desc">Kumpulan template dan referensi skripsi mahasiswa.</div>
+            <span class="card-arrow">→</span>
+          </div>
+
+          <div class="card reveal" onclick="window.open('https://drive.google.com/drive/folders/1f3IuEUKyd8X0mDCVAhpZPWMoI9sU3Kxv','_blank')">
+            <div class="card-icon">📋</div>
+            <div class="card-title">Bank Soal</div>
+            <div class="card-desc">Kumpulan soal ujian dan latihan semester sebelumnya.</div>
+            <span class="card-arrow">→</span>
+          </div>
+
+          <div class="card reveal" onclick="window.open('https://drive.google.com/drive/folders/1sYrAn-M1V9n6BpZr3dKPEZU6elng3cTf','_blank')">
+            <div class="card-icon">📚</div>
+            <div class="card-title">Bank Materi</div>
+            <div class="card-desc">Materi perkuliahan, modul, dan bahan ajar mata kuliah.</div>
+            <span class="card-arrow">→</span>
+          </div>
+
+          <div class="card reveal" onclick="window.open('https://drive.google.com/drive/folders/1izNNCMH2o11yV2-4F74ryRskWhGeuJAV','_blank')">
+            <div class="card-icon">🔬</div>
+            <div class="card-title">PKM</div>
+            <div class="card-desc">Dokumen dan panduan Program Kreativitas Mahasiswa.</div>
+            <span class="card-arrow">→</span>
+          </div>
+
+          <div class="card reveal" onclick="window.open('https://drive.google.com/drive/folders/1RI4miI-ZaJO4yjt8IMK8LlzMR0p7nqJL','_blank')">
+            <div class="card-icon">🛠️</div>
+            <div class="card-title">Software Tools</div>
+            <div class="card-desc">Perangkat lunak dan tools yang dibutuhkan perkuliahan.</div>
+            <span class="card-arrow">→</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── TAB: KALENDER ── -->
+      <div class="tab-panel" id="kalender">
+        <div class="section-header" style="text-align:left; margin-bottom:2rem;">
+          <div class="section-label">Jadwal Resmi</div>
+          <h2 class="section-title" style="font-size:1.6rem;">Kalender Akademik</h2>
+          <p class="section-desc" style="margin-left:0; text-align:left;">Kalender akademik resmi Universitas Airlangga tahun ajaran 2025/2026.</p>
+        </div>
+        <div style="max-width: 520px;">
+          <div class="card reveal" onclick="window.open('https://fst.unair.ac.id/blog/2025/07/09/kalender-akademik-universitas-airlangga-2025-2026/','_blank')" style="padding:2rem;">
+            <div class="card-icon" style="width:56px;height:56px;font-size:1.8rem;">📅</div>
+            <div class="card-title" style="font-size:1.15rem; margin-bottom:.6rem;">Kalender Akademik 2025/2026</div>
+            <div class="card-desc" style="font-size:.88rem; line-height:1.65;">
+              Kalender Akademik Universitas Airlangga 2025/2026 dan Lampiran keputusan Rektor. Berisi informasi lengkap tentang jadwal perkuliahan, libur nasional, dan kegiatan akademik penting sepanjang tahun ajaran.
+            </div>
+            <div style="margin-top:1rem;">
+              <span style="display:inline-flex; align-items:center; gap:.4rem; font-size:.78rem; font-weight:700; color:var(--gold);">
+                🔗 Akses Kalender Akademik FST UNAIR →
+              </span>
+            </div>
+            <span class="card-arrow">→</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── TAB: BEASISWA ── -->
+      <div class="tab-panel" id="beasiswa">
+        <div class="section-header" style="text-align:left; margin-bottom:1.5rem;">
+          <div class="section-label">Pendanaan Pendidikan</div>
+          <h2 class="section-title" style="font-size:1.6rem;">Informasi Beasiswa</h2>
+        </div>
+
+        <a href="https://unair.ac.id/mahasiswa-beasiswa/" target="_blank" rel="noopener" class="info-link-top reveal">
+          🌐 Informasi Terpusat Universitas Airlangga →
+        </a>
+
+        <div class="reveal">
+
+          <a href="https://kip-kuliah.kemdikbud.go.id/" target="_blank" rel="noopener" class="beasiswa-link">
+            <div class="bz-name">KIP Kuliah (Kartu Indonesia Pintar Kuliah)</div>
+            <div class="bz-desc">Bantuan pendidikan penuh dari Kemdikbudristek yang membebaskan biaya UKT dan memberikan uang saku bulanan. Ditujukan untuk mahasiswa dari keluarga dengan keterbatasan ekonomi.</div>
+            <span class="bz-badge">Kemdikbudristek</span>
+          </a>
+
+          <a href="https://beasiswaunggulan.kemdikbud.go.id/" target="_blank" rel="noopener" class="beasiswa-link">
+            <div class="bz-name">Beasiswa Unggulan Kemendikbudristek</div>
+            <div class="bz-desc">Diberikan kepada mahasiswa yang memiliki prestasi akademik maupun non-akademik di tingkat nasional maupun internasional.</div>
+            <span class="bz-badge">Kemdikbudristek</span>
+          </a>
+
+          <a href="https://djarumbeasiswaplus.org/" target="_blank" rel="noopener" class="beasiswa-link">
+            <div class="bz-name">Djarum Beasiswa Plus</div>
+            <div class="bz-desc">Memberikan dana pendidikan bulanan sekaligus pelatihan soft skills skala nasional. Biasanya dibuka untuk mahasiswa semester 4.</div>
+            <span class="bz-badge">Swasta · Nasional</span>
+          </a>
+
+          <a href="https://www.bi.go.id/" target="_blank" rel="noopener" class="beasiswa-link">
+            <div class="bz-name">Beasiswa Bank Indonesia (Reguler & Unggulan)</div>
+            <div class="bz-desc">Memberikan dana bulanan dan kesempatan bergabung dengan komunitas GenBI untuk pelatihan kepemimpinan. Info komunitas: <span style="color:var(--gold); text-decoration:underline;">genbi.id</span></div>
+            <span class="bz-badge">Bank Indonesia</span>
+          </a>
+
+          <a href="https://ybmbrilian.id/program/pendidikan/smart-scholarship/" target="_blank" rel="noopener" class="beasiswa-link">
+            <div class="bz-name">Beasiswa BRI SMART / Smart Scholarship</div>
+            <div class="bz-desc">Dukungan pendanaan kuliah dan program pengembangan diri dari Yayasan Baitul Maal (YBM) BRILiaN.</div>
+            <span class="bz-badge">YBM BRILiaN</span>
+          </a>
+
+          <a href="https://www.bca.co.id/id/tentang-bca/CSR/Bakti-BCA/bakti-pendidikan/beasiswa-bakti-bca" target="_blank" rel="noopener" class="beasiswa-link">
+            <div class="bz-name">Beasiswa Bakti BCA</div>
+            <div class="bz-desc">Bantuan finansial dan pelatihan untuk mahasiswa S1 berprestasi tingkat pertengahan, biasanya semester 5 ke atas.</div>
+            <span class="bz-badge">BCA</span>
+          </a>
+
+          <a href="https://bsischolarship.id/" target="_blank" rel="noopener" class="beasiswa-link">
+            <div class="bz-name">Beasiswa BSI Scholarship Inspirasi</div>
+            <div class="bz-desc">Pendanaan dari dana zakat PT Bank Syariah Indonesia untuk mahasiswa semester 3.</div>
+            <span class="bz-badge">Bank Syariah Indonesia</span>
+          </a>
+
+          <a href="https://beasiswa.pertaminafoundation.org/" target="_blank" rel="noopener" class="beasiswa-link">
+            <div class="bz-name">Beasiswa Sobat Bumi Pertamina</div>
+            <div class="bz-desc">Ditujukan bagi mahasiswa berprestasi yang aktif dan memiliki kepedulian tinggi terhadap isu pelestarian lingkungan.</div>
+            <span class="bz-badge">Pertamina Foundation</span>
+          </a>
+
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- ══ FOOTER ══ -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand-name">Portal Akademik SI UNAIR</div>
+        <div class="footer-brand-sub">Program Studi Sistem Informasi</div>
+        <p class="footer-about">Platform informasi akademik terpadu untuk mahasiswa Sistem Informasi Universitas Airlangga.</p>
+      </div>
+      <div>
+        <div class="footer-contact-title">PUSAT HUBUNGAN MASYARAKAT DAN PROTOKOL (PHMP)</div>
+        <div class="footer-contact-item"><span class="icon">📍</span><span>Gedung Kantor Manajemen, Kampus MERR C Mulyorejo – Surabaya</span></div>
+        <div class="footer-contact-item"><span class="icon">📞</span><span>Telp. (031) 5914042, 5914043, 5915551 · Fax. (031) 5915551</span></div>
+        <div class="footer-contact-item"><span class="icon">💬</span><span>WhatsApp (Chat Only): +62 812-3456-9007</span></div>
+        <div class="footer-contact-item"><span class="icon">✉️</span><span>Email: adm@humas.unair.ac.id</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2025 Portal Akademik Sistem Informasi · Universitas Airlangga.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

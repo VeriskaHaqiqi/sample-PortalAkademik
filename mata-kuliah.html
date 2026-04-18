@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mata Kuliah — Portal SI UNAIR</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .55s ease, transform .55s ease;
+    }
+    .reveal.revealed { opacity: 1; transform: none; }
+
+    .mk-tools {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .mk-count {
+      font-size: .85rem;
+      color: var(--gray-400);
+      font-weight: 500;
+    }
+    .mk-controls {
+      display: flex;
+      gap: .6rem;
+    }
+    .mk-controls .btn {
+      padding: .5rem 1rem;
+      font-size: .8rem;
+    }
+
+    /* ── Praktikum badge ── */
+    .badge-prak {
+      display: inline-block;
+      background: rgba(15,34,68,.08);
+      color: var(--navy-light);
+      font-size: .68rem;
+      font-weight: 700;
+      padding: .2rem .55rem;
+      border-radius: 99px;
+      margin-left: .4rem;
+      letter-spacing: .04em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══ NAVBAR ══ -->
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <div class="brand-icon">
+        <img src="/assets/logo_unair.png" alt="Logo UNAIR">
+    </div>
+      <div class="brand-text">
+        <span class="brand-title">SI UNAIR</span>
+        <span class="brand-sub">Portal Akademik</span>
+      </div>
+    </div>
+    <div class="nav-toggle" role="button" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="informasi-akademik.html">Informasi Akademik</a>
+      <a href="mata-kuliah.html" class="active">Mata Kuliah</a>
+      <a href="form-pengaduan.html">Form Pengaduan</a>
+    </div>
+  </nav>
+
+  <main class="page-main">
+
+    <!-- ══ PAGE HERO ══ -->
+    <div class="page-hero">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="sep">›</span>
+        <span>Mata Kuliah</span>
+      </div>
+      <div class="page-hero-label">Semester Berjalan</div>
+      <h1 class="page-hero-title">Daftar Mata Kuliah</h1>
+      <p class="page-hero-desc">Halaman ini berisi daftar mata kuliah yang diambil pada semester berjalan beserta informasi singkat mengenai setiap mata kuliah.</p>
+    </div>
+
+    <!-- ══ MAIN CONTENT ══ -->
+    <section class="section">
+
+      <div class="mk-tools reveal">
+        <span class="mk-count">Menampilkan <strong>11</strong> mata kuliah</span>
+        <div class="mk-controls">
+          <button id="expandAll" class="btn btn-outline" style="color:var(--navy); border-color:var(--gray-200); background:var(--white);">
+            ↕ Tampilkan Semua
+          </button>
+          <button id="collapseAll" class="btn btn-navy">
+            ↕ Sembunyikan Semua
+          </button>
+        </div>
+      </div>
+
+      <div class="cards-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
+
+        <!-- 1 -->
+        <div class="mk-card reveal">
+          <div class="mk-card-header">
+            <div class="mk-card-title">Pemrograman Web</div>
+            <span class="mk-card-sks">2 SKS</span>
+          </div>
+          <div class="mk-card-body">
+            <div class="mk-card-dosen">👤 Barry Nuqoba</div>
+            <div class="mk-desc-toggle">Mempelajari teori dasar HTML, CSS, dan JavaScript untuk membuat website yang interaktif dan responsif.</div>
+            <button class="toggle-btn">
+              <span class="btn-label">Lihat Detail</span> <i class="arrow">▾</i>
+            </button>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="mk-card reveal">
+          <div class="mk-card-header">
+            <div class="mk-card-title">Pemrograman Web <span class="badge-prak">Praktikum</span></div>
+            <span class="mk-card-sks">2 SKS</span>
+          </div>
+          <div class="mk-card-body">
+            <div class="mk-card-dosen">👤 Taufik</div>
+            <div class="mk-desc-toggle">Praktik membuat website menggunakan HTML, CSS, dan JavaScript secara langsung di lingkungan lab komputer.</div>
+            <button class="toggle-btn">
+              <span class="btn-label">Lihat Detail</span> <i class="arrow">▾</i>
+            </button>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="mk-card reveal">
+          <div class="mk-card-header">
+            <div class="mk-card-title">Pemrograman Mobile</div>
+            <span class="mk-card-sks">2 SKS</span>
+          </div>
+          <div class="mk-card-body">
+            <div class="mk-card-dosen">👤 Barry Nuqoba</div>
+            <div class="mk-desc-toggle">Mempelajari teori framework Flutter dan bahasa Dart untuk pengembangan aplikasi mobile lintas platform.</div>
+            <button class="toggle-btn">
+              <span class="btn-label">Lihat Detail</span> <i class="arrow">▾</i>
+            </button>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="mk-card reveal">
+          <div class="mk-card-header">
+            <div class="mk-card-title">Pemrograman Mobile <span class="badge-prak">Praktikum</span></div>
+            <span class="mk-card-sks">2 SKS</span>
+          </div>
+          <div class="mk-card-body">
+            <div class="mk-card-dosen">👤 Purbandini</div>
+            <div class="mk-desc-toggle">Praktik membuat aplikasi mobile menggunakan Flutter dan Dart, termasuk pengembangan UI dan integrasi API.</div>
+            <button class="toggle-btn">
+              <span class="btn-label">Lihat Detail</span> <i class="arrow">▾</i>
+            </button>
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="mk-card reveal">
+          <div class="mk-card-header">
+            <div class="mk-card-title">Jaringan Komputer</div>
+            <span class="mk-card-sks">3 SKS</span>
+          </div>
+          <div class="mk-card-body">
+            <div class="mk-card-dosen">👤 Badrus Zaman</div>
+            <div class="mk-desc-toggle">Mempelajari konsep jaringan, protokol komunikasi, dan transmisi data dalam sistem jaringan komputer modern.</div>
+            <button class="toggle-btn">
+              <span class="btn-label">Lihat Detail</span> <i class="arrow">▾</i>
+            </button>
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="mk-card reveal">
+          <div class="mk-card-header">
+            <div class="mk-card-title">Jaringan Komputer <span class="badge-prak">Praktikum</span></div>
+            <span class="mk-card-sks">2 SKS</span>
+          </div>
+          <div class="mk-card-body">
+            <div class="mk-card-dosen">👤 Taufik</div>
+            <div class="mk-desc-toggle">Praktik pembuatan jaringan, konfigurasi protokol, dan simulasi komunikasi data menggunakan perangkat keras dan lunak.</div>
+            <button class="toggle-btn">
+              <span class="btn-label">Lihat Detail</span> <i class="arrow">▾</i>
+            </button>
+          </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="mk-card reveal">
+          <div class="mk-card-header">
+            <div class="mk-card-title">Analisis Perancangan Sistem Informasi</div>
+            <span class="mk-card-sks">3 SKS</span>
+          </div>
+          <div class="mk-card-body">
+            <div class="mk-card-dosen">👤 Ira Puspita</div>
+            <div class="mk-desc-toggle">Mempelajari teori dan metodologi analisis kebutuhan sistem informasi pada suatu perusahaan beserta teknik perancangannya.</div>
+            <button class="toggle-btn">
+              <span class="btn-label">Lihat Detail</span> <i class="arrow">▾</i>
+            </button>
+          </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="mk-card reveal">
+          <div class="mk-card-header">
+            <div class="mk-card-title">Analisis Perancangan SI <span class="badge-prak">Praktikum</span></div>
+            <span class="mk-card-sks">3 SKS</span>
+          </div>
+          <div class="mk-card-body">
+            <div class="mk-card-dosen">👤 Indah Werdiningsih</div>
+            <div class="mk-desc-toggle">Mempraktikkan analisis kebutuhan dan perancangan sistem informasi pada studi kasus perusahaan nyata.</div>
+            <button class="toggle-btn">
+              <span class="btn-label">Lihat Detail</span> <i class="arrow">▾</i>
+            </button>
+          </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="mk-card reveal">
+          <div class="mk-card-header">
+            <div class="mk-card-title">Sistem Enterprise</div>
+            <span class="mk-card-sks">2 SKS</span>
+          </div>
+          <div class="mk-card-body">
+            <div class="mk-card-dosen">👤 Eva Hariyanti</div>
+            <div class="mk-desc-toggle">Mempelajari fungsi dan proses bisnis suatu perusahaan serta menemukan ide pengembangan dan inovasi proses bisnisnya.</div>
+            <button class="toggle-btn">
+              <span class="btn-label">Lihat Detail</span> <i class="arrow">▾</i>
+            </button>
+          </div>
+        </div>
+
+        <!-- 10 -->
+        <div class="mk-card reveal">
+          <div class="mk-card-header">
+            <div class="mk-card-title">Pembelajaran Mesin</div>
+            <span class="mk-card-sks">2 SKS</span>
+          </div>
+          <div class="mk-card-body">
+            <div class="mk-card-dosen">👤 Rimuljo Hendradi</div>
+            <div class="mk-desc-toggle">Mempelajari konsep dasar pembelajaran mesin, algoritma supervised dan unsupervised, serta penerapannya dalam berbagai domain.</div>
+            <button class="toggle-btn">
+              <span class="btn-label">Lihat Detail</span> <i class="arrow">▾</i>
+            </button>
+          </div>
+        </div>
+
+        <!-- 11 -->
+        <div class="mk-card reveal">
+          <div class="mk-card-header">
+            <div class="mk-card-title">Pembelajaran Mesin <span class="badge-prak">Praktikum</span></div>
+            <span class="mk-card-sks">2 SKS</span>
+          </div>
+          <div class="mk-card-body">
+            <div class="mk-card-dosen">👤 Endah Purwanti</div>
+            <div class="mk-desc-toggle">Praktik dasar implementasi pembelajaran mesin menggunakan Python dan library seperti Scikit-learn atau TensorFlow.</div>
+            <button class="toggle-btn">
+              <span class="btn-label">Lihat Detail</span> <i class="arrow">▾</i>
+            </button>
+          </div>
+        </div>
+
+        <!-- 12 -->
+        <div class="mk-card reveal">
+          <div class="mk-card-header">
+            <div class="mk-card-title">Kepemimpinan dan Manajemen Organisasi <span class="badge-prak">Praktikum</span></div>
+            <span class="mk-card-sks">3 SKS</span>
+          </div>
+          <div class="mk-card-body">
+            <div class="mk-card-dosen">👤 Barry Nuqoba</div>
+            <div class="mk-desc-toggle">Mempelajari teori dan praktik kepemimpinan dan Manajemen Organisasi</div>
+            <button class="toggle-btn">
+              <span class="btn-label">Lihat Detail</span> <i class="arrow">▾</i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ══ FOOTER ══ -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand-name">Portal Akademik SI UNAIR</div>
+        <div class="footer-brand-sub">Program Studi Sistem Informasi</div>
+        <p class="footer-about">Platform informasi akademik terpadu untuk mahasiswa Sistem Informasi Universitas Airlangga.</p>
+      </div>
+      <div>
+        <div class="footer-contact-title">PUSAT HUBUNGAN MASYARAKAT DAN PROTOKOL (PHMP)</div>
+        <div class="footer-contact-item"><span class="icon">📍</span><span>Gedung Kantor Manajemen, Kampus MERR C Mulyorejo – Surabaya</span></div>
+        <div class="footer-contact-item"><span class="icon">📞</span><span>Telp. (031) 5914042, 5914043, 5915551 · Fax. (031) 5915551</span></div>
+        <div class="footer-contact-item"><span class="icon">💬</span><span>WhatsApp (Chat Only): +62 812-3456-9007</span></div>
+        <div class="footer-contact-item"><span class="icon">✉️</span><span>Email: adm@humas.unair.ac.id</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2025 Portal Akademik Sistem Informasi · Universitas Airlangga.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
